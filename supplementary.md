@@ -43,14 +43,22 @@ For detailed information on the U-Net and SRResNet architectures, please refer t
 
 ## Experimental Results
 ### Image Reconstruction Comparison
-![Reconstruction Comparison](path/to/your/result_image.png)
+## Results
+
+To evaluate the performance of the SURGE method in a real-world scenario, we applied it to enhance the image quality of photoacoustic tomography data from our previous study: [Wang X, Luo Y, Chen Y, et al. A skull-removed chronic cranial window for ultrasound and photoacoustic imaging of the rodent brain. Frontiers in Neuroscience, 2021, 15: 673740](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2021.673740/full). In this study, although a 512-element ring array would have been ideal, only 256 channels were used due to experimental limitations.
+
+We applied the SURGE method to upsample the original 256-channel data. The results demonstrate a significant improvement in image quality compared to conventional linear interpolation. Specifically, the original sparse sampling (256 channels), linear interpolation, and SURGE upsampling (to 512 channels) are compared in the figure below.
+
+From left to right, the sub-panels represent:
+1. **Sparse Sampling**: Based on 256 channels, showing prominent streak artifacts.
+2. **Linear Interpolation**: Upsampled to 512 channels but still retains significant artifacts.
+3. **SURGE Method**: Our method, which significantly reduces the streak artifacts and provides a much clearer reconstruction.
+
+The regions of interest (highlighted with blue, pink, and orange boxes) and their corresponding enlarged images demonstrate how the SURGE method effectively mitigates the artifacts that persist in the linear interpolation result.
+
+![Sparse Sampling, Linear Interpolation, and SURGE Results](Wang_Compare.jpg)
 *Figure 1: Comparison of reconstruction quality between SURGE and traditional methods.*
 
-### Performance Metrics
-| Method     | PSNR  | SSIM  |
-|------------|-------|-------|
-| SURGE      | 38.5  | 0.92  |
-| Traditional| 35.0  | 0.85  |
 
 ## Noise Test Dynamic Results
 Here is a GIF showing how the model performs on noisy data over time. The noise reduction is demonstrated as the model progressively enhances the image quality.
