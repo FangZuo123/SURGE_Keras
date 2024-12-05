@@ -55,7 +55,7 @@ From left to right, the sub-panels represent:
 3. **SURGE Method**: Our method, which significantly reduces the streak artifacts and provides a much clearer reconstruction.
 
 The regions of interest (highlighted with blue, pink, and orange boxes) and their corresponding enlarged images demonstrate how the SURGE method effectively mitigates the artifacts that persist in the linear interpolation result.
-<img src="images/result_image.png" alt="Sparse Sampling, Linear Interpolation, and SURGE Results" width="500"/>
+<img src="Wang_Compare.jpg" alt="Sparse Sampling, Linear Interpolation, and SURGE Results" width="500"/>
 
 *Figure 1: Real-World Scenario example.*
 
