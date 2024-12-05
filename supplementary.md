@@ -8,13 +8,8 @@
 
 
 
-## Method Description
-### Model Architecture
-- **Overview**: The model is based on a convolutional neural network (CNN) with specialized layers for self-supervised learning and upsampling.
-- **Upsampling Schedule**: During training, low-resolution patches are progressively enhanced using a self-supervised learning approach. The upsampling process is scheduled to improve over time, ensuring the model learns to generalize to various sensor configurations.
 
-  ## Model Architecture
-
+## Model Description
 ### 1. **U-Net**
 U-Net is a convolutional neural network (CNN) architecture originally designed for biomedical image segmentation tasks. Its key feature is the symmetric encoder-decoder structure, which allows for efficient feature extraction and spatial information recovery. The architecture’s main advantage is the use of **skip connections** between the encoder and decoder, which help preserve fine-grained details, making it particularly effective for image reconstruction tasks.
 
@@ -39,11 +34,12 @@ For detailed information on the U-Net and SRResNet architectures, please refer t
 
 - **U-Net**: [Ronneberger et al., U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)
 - **SRResNet**: [Ledig et al., Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network](https://arxiv.org/abs/1609.04802)
+
 ### Training Details
-- **Batch Size**: 32
+- **Batch Size**: 8
 - **Learning Rate**: 0.001
 - **Optimizer**: Adam
-- **Loss Function**: MSE + perceptual loss
+- **Loss Function**: L1 + L0
 
 ## Experimental Results
 ### Image Reconstruction Comparison
